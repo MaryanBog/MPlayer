@@ -1,11 +1,15 @@
 package com.example.mplayer.di
 
+import android.content.ComponentName
 import android.content.Context
+import androidx.annotation.OptIn
+import androidx.media3.common.util.UnstableApi
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.example.mplayer.R
-import com.example.mplayer.exoplayer.MusicServiceConnection
+import com.example.mplayer.media.MusicService
+import com.example.mplayer.media.MusicServiceConnection
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,11 +21,16 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
-    @Singleton
+    @OptIn(UnstableApi::class) @Singleton
     @Provides
     fun provideMusicServiceConnection(
         @ApplicationContext context: Context
-    ) = MusicServiceConnection(context)
+    ): MusicServiceConnection {
+        return MusicServiceConnection.getInstance(
+            context,
+            ComponentName(context, MusicService::class.java)
+        )
+    }
 
     @Singleton
     @Provides

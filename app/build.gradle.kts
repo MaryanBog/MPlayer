@@ -69,6 +69,7 @@ dependencies {
     // Coroutines
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.7.1")
 
     // Coroutine Lifecycle Scopes
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
@@ -101,10 +102,15 @@ dependencies {
     // Firebase Coroutines
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.1")
 
-    // ExoPlayer
-    implementation("com.google.android.exoplayer:exoplayer-core:2.19.1")
-    implementation("com.google.android.exoplayer:exoplayer-ui:2.19.1")
-    implementation("com.google.android.exoplayer:extension-mediasession:2.19.1")
+    //Gson
+    implementation("com.google.code.gson:gson:2.10.1")
+
+    //Media Player
+    implementation ("androidx.media3:media3-session:1.2.1")
+    implementation ("androidx.media3:media3-cast:1.2.1")
+    implementation ("androidx.media3:media3-exoplayer:1.2.1")
+    implementation ("androidx.media3:media3-datasource:1.2.1")
+    implementation ("androidx.media3:media3-ui:1.2.1")
 }
 
 kapt {

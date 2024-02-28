@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.media3.common.MediaItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
@@ -45,7 +46,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         subscribeToObservers()
 
         songAdapter.setOnItemClickListener {
-            mainViewModel.playOrToggleSong(it)
+            mainViewModel.playMedia(MediaItem.fromUri(it.mediaId))
         }
     }
 

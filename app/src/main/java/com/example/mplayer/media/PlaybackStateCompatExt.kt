@@ -1,4 +1,4 @@
-package com.example.mplayer.exoplayer
+package com.example.mplayer.media
 
 import android.support.v4.media.session.PlaybackStateCompat
 
