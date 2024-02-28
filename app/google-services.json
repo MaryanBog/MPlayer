@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "37275302421",
+    "project_id": "mplayer-cbc6b",
+    "storage_bucket": "mplayer-cbc6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37275302421:android:2a4798d966e05a2dea6c1c",
+        "android_client_info": {
+          "package_name": "com.example.mplayer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGBWHBHX4bpB1468wBFnW-g1w78VH0pCg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
